@@ -1,7 +1,7 @@
 import React from 'react';
 import NavItem from '../navitem/Navitem';
 import { viewsEnum } from '../../../utils/constants';
-import logo from '../../../assets/images/arkus_logo.png';
+import logo from '../../../assets/images/uta.png';
 import './Header.css';
 
 const items = [
