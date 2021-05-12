@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Excercises from './components/exercises/Excercises';
+import Header from './components/common/header/Header';
+import Landing from './components/landing/Landing';
+import { viewsEnum } from './utils/constants';
 import './App.css';
 
 function App() {
+  const [view, setView] = useState(viewsEnum.LANDING);
+
+  const handleNavigation = (newView) => {
+    setView(newView);
+  }
+
+  let content = null;
+
+  switch (view) {
+    case viewsEnum.EXCERCISES:
+      content = <Excercises />;
+      break;
+    case viewsEnum.LANDING:
+    default:
+      content = <Landing />;
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+    <Header view={view} onNav={handleNavigation} />
+
+    {content}
+  </div>
+
+    );
 }
 
 export default App;
