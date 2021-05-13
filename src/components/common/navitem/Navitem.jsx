@@ -15,7 +15,7 @@ const NavItem = (props)=>{
         type="button"
         onClick={props.onNav}
         >
-            {props.tittle}
+            {props.title}
         </button>
     );
 };

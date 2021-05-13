@@ -16,6 +16,8 @@ const Landing = () =>{
             </div>
             <div className="Landing-right">
             <p>Mi nombre es Armando Heredia y soy de Aguascalientes</p>
+            <br></br><br></br>
+            <p>Y actualmente soy estudiante de la universidad tecnologica de Aguascalientes</p>
             </div>
         </div>
        
